@@ -266,4 +266,4 @@ paths:
 ---
 
 In this example swagger description is directly embedded in the page. See
-[source file](https://raw.githubusercontent.com/jexhson/jekyll-swagger/master/example-1.md)
+[source file](https://raw.githubusercontent.com/jexhson/jekyll-swagger/gh-pages/example-1.md)
