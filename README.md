@@ -1,3 +1,3 @@
-# Swagger API doc within jekyll (works with gh-pages)
+# Swagger API doc within jekyll
 
-Example site for jekyll-swagger. [Try it online!](http://jexhson.github.io/jekyll-swagger/)
+Example website for jekyll-swagger. [Try it online!](http://jexhson.github.io/jekyll-swagger/)
