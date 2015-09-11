@@ -1,7 +1,10 @@
 # Site settings
-title: jekyll-swagger
-baseurl: "/jekyll-swagger" # the subpath of your site, e.g. /blog/
-url: "http://jexhson.github.io/jekyll-swagger/" # the base hostname & protocol for your site
+title: hypothes.is
+baseurl: "/developers.hypothes.is" # the subpath of your site, e.g. /blog/
+url: "http://hypothesis.github.io/developers.hypothes.is/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-redirect-from

@@ -1,36 +1,55 @@
 ---
 layout: page
-title: Swagger API doc within jekyll
+title: Hypothes.is for Developers
 ---
 
-_jekyll-swagger_ is a [Jekyll](http://jekyllrb.com/) layout that allow you to
-include a [Swagger](http://swagger.io/) API documentation directly a page.
-Checkout examples to see how it renders!
+Contribute.
+-----------
 
-**Bonus:** _jekyll-swagger_ works with GitHub pages!
+[Our team] is working hard to build products and services built on [our
+principles]. However, we can’t do this alone. The long term success of
+[open annotation] depends on contributions from a wide array of sources.
 
+Including yours! Here’s how you can join the effort.
 
-## Usage instruction
+Development
+-----------
 
- 1. Download
- [jekyll-swagger](https://github.com/jexhson/jekyll-swagger/zipball/master)
- (you can also clone it).
- 2. Copy `_layouts/swagger.html` and `_saas/_swagger.scss` into your jekyll site.
- 3. Add import `swagger` in `css/main.scss` (like [here](https://github.com/jexhson/jekyll-swagger/blob/gh-pages/css/main.scss#L51))
- 4. You can now create pages with the swagger layout (`layout: swagger`).
+We **code** and collaborate on [GitHub]. Our primary repository is [h],
+and we keep ideas in [vision].
 
-Swagger API doc can be either [within the page](https://raw.githubusercontent.com/jexhson/jekyll-swagger/gh-pages/example-1.md)
-or in a [separate file](https://raw.githubusercontent.com/jexhson/jekyll-swagger/gh-pages/_data/fruits.yml)
-and specified in your page with `data` front matter (like [here](https://raw.githubusercontent.com/jexhson/jekyll-swagger/gh-pages/example-2.md#L4)).
+We have long-form **discussions** on mailing list:
 
-## License
+-   subscribe by sending any message to <dev+subscribe@list.hypothes.is>
+-   [view and search the archive online]
 
-jekyll-swagger is released under the MIT License. See [LICENSE][1] file for
-details.
+We **chat** in [\#hypothes.is] on [freenode]. It’s a great place to meet
+contributors and community members, hang out, discuss the project, and
+get questions answered.
 
-## Links
+Check out [our **documentation**] for the [h] code base to learn about
+what we’ve built and how to use [our public API].
 
-The official site for the library is at <http://jexhson.github.io/jekyll-swagger/>.
+License
+-------
 
+Hypothes.is is Open Source. We typically use the 2-Clause [BSD License]
+(aka the “Simplified BSD License” or the “FreeBSD License”).
 
-[1]: https://github.com/jexhson/jekyll-swagger/blob/master/LICENSE
+If you’re ready to dive in, checkout our [contributor guide] which
+details our work-flow, conventions, and explains our contributor license
+agreement.
+
+  [Our team]: /team
+  [our principles]: /principles/
+  [open annotation]: http://openannotation.org/
+  [GitHub]: https://github.com/hypothesis
+  [h]: https://github.com/hypothesis/h
+  [vision]: https://github.com/hypothesis/vision
+  [view and search the archive online]: https://groups.google.com/a/list.hypothes.is/forum/#!forum/dev
+  [\#hypothes.is]: https://www.irccloud.com/invite?channel=%23hypothes.is&amp;hostname=irc.freenode.net&amp;port=6667&amp;ssl=1
+  [freenode]: http://freenode.net/
+  [our **documentation**]: http://h.readthedocs.org/
+  [our public API]: http://h.readthedocs.org/en/latest/api.html
+  [BSD License]: http://choosealicense.com/licenses/bsd-2-clause/
+  [contributor guide]: https://h.readthedocs.org/en/latest/hacking/

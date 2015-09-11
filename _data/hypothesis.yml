@@ -1,0 +1,268 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Hypothes.is API
+  description: Annotation storage for the Hypothes.is service
+  version: "0.7.2"
+# the domain of the service
+host: hypothes.is
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /api
+produces:
+  - application/json
+paths:
+  /:
+    get:
+      summary: API Description
+      responses:
+        200:
+          description: Describes the API
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              links:
+                type: object
+                properties:
+                  search:
+                    $ref: '#/definitions/Endpoint'
+                  annotation:
+                    type: object
+                    properties:
+                      read:
+                        $ref: '#/definitions/Endpoint'
+                      create:
+                        $ref: '#/definitions/Endpoint'
+                      update:
+                        $ref: '#/definitions/Endpoint'
+                      delete:
+                        $ref: '#/definitions/Endpoint'
+  /search:
+    get:
+      summary: Basic search API
+      description: |
+        search for stuff
+      parameters:
+        - name: q
+          in: query
+          description: Search for strings
+          required: true
+          type: string
+      tags:
+        - Search
+        - Annotations
+      responses:
+        200:
+          description: List of annotations.
+          schema:
+            $ref: '#/definitions/AnnotationList'
+  /annotations:
+    get:
+      summary: Latest Annotations
+      tags:
+       - Annotations
+      responses:
+        200:
+          description: An array of annotations
+          schema:
+            $ref: '#/definitions/AnnotationList'
+    post:
+      summary: Create a new annotation
+      tags:
+       - Annotations
+      parameters:
+       - name: annotation
+         in: body
+         required: true
+         schema:
+           $ref: '#/definitions/Annotation'
+      responses:
+        200:
+          description: The store Annotation.
+          schema:
+            $ref: '#/definitions/Annotation'
+  /annotations/{id}:
+    put:
+      summary: Update an annotation.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: annotation
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Annotation'
+      responses:
+        200:
+          description: The stored Annotation.
+          schema:
+            $ref: '#/definitions/Annotation'
+    delete:
+      summary: Delete an annotation.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Success message.
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              deleted:
+                type: boolean
+definitions:
+  Endpoint:
+    type: object
+    required:
+     - url
+     - method
+    properties:
+      url:
+        type: string
+        description: URL of API endpoint
+      method:
+        type: string
+        description: HTTP Method name
+      desc:
+        type: string
+        description: Description of this endpoint's purpose.
+  Annotation:
+    type: object
+    required:
+     - user
+     - uri
+    properties:
+      id:
+        type: string
+        description: Unique ID for this Annotation.
+      uri:
+        type: string
+        description: URI which is the target of this Annotation.
+      target:
+        type: array
+        items:
+         - type: object
+           properties:
+            scope:
+              type: array
+              items:
+                - type: string
+            selector:
+              type: array
+              items:
+                - type: object
+                  properties:
+                    type:
+                      description: Type of Selector--see Web Annotation Data Model.
+                      type: string
+            source:
+              type: string
+      user:
+        type: string
+        description: User URI in the form of an `acct` prefixed URI.
+      document:
+        type: object
+        description: Target document metadata
+        schema:
+          $ref: '#/definitions/DocumentMetadata'
+      permissions:
+        type: object
+        description: Permissions for this Annotation.
+      created:
+        type: string
+        format: date-time
+      updated:
+        type: string
+        format: date-time
+  AnnotationList:
+    type: object
+    properties:
+      total:
+        type: number
+      rows:
+        type: array
+        items:
+          $ref: '#/definitions/Annotation'
+  DocumentMetadata:
+    type: object
+    properties:
+      eprints:
+        type: object
+      title:
+        type: string
+      twitter:
+        type: object
+        properties:
+          image:src:
+            type: array
+            items:
+              type: string
+          title:
+            type: array
+            items:
+              type: string
+          description:
+            type: array
+            items:
+              type: string
+          card:
+            type: array
+            items:
+              type: string
+          site:
+            type: array
+            items:
+              type: string
+      dc:
+        type: object
+      favicon:
+        type: string
+      prism:
+        type: object
+      highwire:
+        type: object
+      link:
+        type: array
+        items:
+          type: object
+          properties:
+            href:
+              type: string
+      facebook:
+        type: object
+        properties:
+          site_name:
+            type: array
+            items:
+              type: string
+          description:
+            type: array
+            items:
+              type: string
+          title:
+            type: array
+            items:
+              type: string
+          url:
+            type: array
+            items:
+              type: string
+          image:
+            type: array
+            items:
+              type: string
+          type:
+            type: array
+            items:
+              type: string
