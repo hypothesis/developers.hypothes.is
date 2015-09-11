@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Hypothes.is for Developers
+title: Hypothes<span class="brand-text">.</span>is for Developers
 ---
 
-Contribute.
------------
+## Contribute<span class="brand-text">.</span>
 
 [Our team] is working hard to build products and services built on [our
 principles]. However, we can’t do this alone. The long term success of
@@ -12,8 +11,7 @@ principles]. However, we can’t do this alone. The long term success of
 
 Including yours! Here’s how you can join the effort.
 
-Development
------------
+### Development
 
 We **code** and collaborate on [GitHub]. Our primary repository is [h],
 and we keep ideas in [vision].
@@ -30,8 +28,7 @@ get questions answered.
 Check out [our **documentation**] for the [h] code base to learn about
 what we’ve built and how to use [our public API].
 
-License
--------
+### License
 
 Hypothes.is is Open Source. We typically use the 2-Clause [BSD License]
 (aka the “Simplified BSD License” or the “FreeBSD License”).
