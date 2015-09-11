@@ -1,7 +1,7 @@
 # Site settings
 title: hypothes.is
 baseurl: "/developers.hypothes.is" # the subpath of your site, e.g. /blog/
-url: "http://hypothesis.github.io/developers.hypothes.is/" # the base hostname & protocol for your site
+url: "http://bigbluehat.github.io/developers.hypothes.is/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
