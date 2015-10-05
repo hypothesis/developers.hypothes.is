@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Hypothes<span class="brand-text">.</span>is for Developers
+title: Hypothes.is for Developers
 ---
 
-## Contribute<span class="brand-text">.</span>
+## Contribute.
 
 [Our team] is working hard to build products and services built on [our
 principles]. However, we can’t do this alone. The long term success of
