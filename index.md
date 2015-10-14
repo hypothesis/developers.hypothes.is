@@ -1,52 +1,22 @@
 ---
-layout: page
+layout: default
 title: Hypothes.is for Developers
 ---
 
-## Contribute.
+[Hypothes.is](http://hypothes.is/) is one part public service and one part
+[Open Source](open-source.html) project.
 
-[Our team] is working hard to build products and services built on [our
-principles]. However, we can’t do this alone. The long term success of
-[open annotation] depends on contributions from a wide array of sources.
+## Public Service
 
-Including yours! Here’s how you can join the effort.
+Thousands of people are creating meaningful annotation content via the
+Hypothes.is browser extension, web site embedding, and on partner web sites.
 
-### Development
+Public annotations on Hypothes.is are licensed under the CC0 licence (aka
+Public Domain). This rich dataset is availalbe via the Hypothes.is
+[HTTP API](api.html).
 
-We **code** and collaborate on [GitHub]. Our primary repository is [h],
-and we keep ideas in [vision].
+## Open Source
 
-We have long-form **discussions** on mailing list:
-
--   subscribe by sending any message to <dev+subscribe@list.hypothes.is>
--   [view and search the archive online]
-
-We **chat** in [\#hypothes.is] on [freenode]. It’s a great place to meet
-contributors and community members, hang out, discuss the project, and
-get questions answered.
-
-Check out [our **documentation**] for the [h] code base to learn about
-what we’ve built and how to use [our public API].
-
-### License
-
-Hypothes.is is Open Source. We typically use the 2-Clause [BSD License]
-(aka the “Simplified BSD License” or the “FreeBSD License”).
-
-If you’re ready to dive in, checkout our [contributor guide] which
-details our work-flow, conventions, and explains our contributor license
-agreement.
-
-  [Our team]: /team
-  [our principles]: /principles/
-  [open annotation]: http://openannotation.org/
-  [GitHub]: https://github.com/hypothesis
-  [h]: https://github.com/hypothesis/h
-  [vision]: https://github.com/hypothesis/vision
-  [view and search the archive online]: https://groups.google.com/a/list.hypothes.is/forum/#!forum/dev
-  [\#hypothes.is]: https://www.irccloud.com/invite?channel=%23hypothes.is&amp;hostname=irc.freenode.net&amp;port=6667&amp;ssl=1
-  [freenode]: http://freenode.net/
-  [our **documentation**]: http://h.readthedocs.org/
-  [our public API]: http://h.readthedocs.org/en/latest/api.html
-  [BSD License]: http://choosealicense.com/licenses/bsd-2-clause/
-  [contributor guide]: https://h.readthedocs.org/en/latest/hacking/
+The code that runs the public service is available under the BSD-2-Clause
+license. If you have an interest in the future of web annotation, please
+[join us](open-source.html)!
