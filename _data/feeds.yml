@@ -1,0 +1,112 @@
+swagger: '2.0'
+info:
+  title: Hypothes.is Feeds
+  description: Atom and RSS Feeds for Hypothes.is Stream
+  version: "0.7.2"
+# the domain of the service
+host: hypothes.is
+# array of all schemes that your API supports
+schemes:
+  - https
+produces:
+  - application/atom+xml
+  - application/rss+xml
+paths:
+  /stream.atom:
+    get:
+      produces:
+        - application/atom+xml
+      summary: Atom Syndication Format output of most recent annotations
+      parameters:
+        - name: uri
+          in: query
+          description: Filter by URI/URL
+          type: string
+        - name: tags
+          in: query
+          description: Filter by Tag
+          type: string
+        - name: user
+          in: query
+          description: Filter by User
+          type: string
+      responses:
+        200:
+          description: Most recent annotations--newest first
+          examples:
+            application/atom+xml: |
+              <?xml version="1.0" encoding="utf-8"?>
+              <feed xmlns="http://www.w3.org/2005/Atom">
+                <id>https://hypothes.is/stream.atom</id>
+                <title>Hypothesis Stream</title>
+                <subtitle>The Web. Annotated</subtitle>
+                <updated>2015-10-14T13:16:59.272842+00:00</updated>
+
+                <link rel="self" type="application/atom+xml" href="https://hypothes.is/stream.atom" />
+
+                <link rel="alternate" type="text/html" href="https://hypothes.is/stream" />
+
+                <entry>
+                  <id>tag:hypothes.is,2015-09:V1m01RAkReiCDqiAsjBRBg</id>
+                  <title>Smith, William, A Dictionary of Greek and Roman biography and mythology</title>
+                  <updated>2015-10-14T13:16:59.272842+00:00</updated>
+                  <published>2015-10-14T13:16:59.272831+00:00</published>
+                  <author>
+                    <name>120brian</name>
+                  </author>
+
+                  <link rel="alternate" type="text/html" href="https://hypothes.is/a/V1m01RAkReiCDqiAsjBRBg" />
+
+                  <link rel="alternate" type="application/json" href="https://hypothes.is/api/annotations/V1m01RAkReiCDqiAsjBRBg" />
+
+                  <link rel="related" href="http://perseids.org/sites/smiths/P/poseidon_1.html" />
+
+                  <content type="html">
+
+                      &lt;blockquote&gt;Zeus&lt;/blockquote&gt;brother
+                  </content>
+                </entry>
+              </feed>
+  /stream.rss:
+    get:
+      produces:
+        application/rss+xml
+      summary: RSS 2.0 Feed Format output of most recent annotations
+      parameters:
+        - name: uri
+          in: query
+          description: Filter by URI/URL
+          type: string
+        - name: tags
+          in: query
+          description: Filter by Tag
+          type: string
+        - name: user
+          in: query
+          description: Filter by User
+          type: string
+      responses:
+        200:
+          description: Most recent annotations--newest first
+          examples:
+            application/rss+xml: |
+              <?xml version="1.0"?>
+              <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+                <channel>
+                  <title>Hypothesis Stream</title>
+                  <link>https://hypothes.is/stream</link>
+                  <atom:link href="https://hypothes.is/stream.rss" rel="self" type="application/rss+xml" />
+                  <description>The Web. Annotated</description>
+                  <pubDate>Wed, 14 Oct 2015 13:16:59 UTC</pubDate>
+                  <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+
+                  <item>
+                     <title>Smith, William, A Dictionary of Greek and Roman biography and mythology</title>
+                     <description>&lt;blockquote&gt;Zeus&lt;/blockquote&gt;brother</description>
+                     <pubDate>Wed, 14 Oct 2015 13:16:59 +0000</pubDate>
+                     <guid isPermaLink="true">tag:hypothes.is,2015-09:V1m01RAkReiCDqiAsjBRBg</guid>
+                     <link>https://hypothes.is/a/V1m01RAkReiCDqiAsjBRBg</link>
+                  </item>
+                </channel>
+              </rss>
+
