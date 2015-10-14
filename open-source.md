@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Open Source
+menu: main
 ---
 
 
