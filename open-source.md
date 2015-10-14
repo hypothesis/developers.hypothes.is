@@ -12,6 +12,12 @@ principles]. However, we can’t do this alone. The long term success of
 
 Including yours! Here’s how you can join the effort.
 
+### Documentation
+
+Documentation for the [h](http://github.com/hypothesis/h) code, it's HTTP API,
+and other production-related documentation is available at
+[h.readthedocs.org](http://h.readthedocs.org/).
+
 ### Development
 
 We **code** and collaborate on [GitHub]. Our primary repository is [h],
