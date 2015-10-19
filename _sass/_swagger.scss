@@ -68,7 +68,8 @@
     @include swagger-method(#E27A7A);
 }
 
-.swagger-method-details {
+.swagger-method-details,
+.swagger-example {
     margin: 0;
     padding: 15px;
     display: none;
