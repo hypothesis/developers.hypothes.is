@@ -26,3 +26,8 @@ and RSS syndication feeds.
 Checkout the [Feeds](api/feeds.html) documentation for more information on
 querying.
 
+## Integration
+
+Our [HTTP API] provides access to publicly published, public domain licensed
+annotation content. We have a growing list of community created
+[client libraries](api/libraries.html) available.
