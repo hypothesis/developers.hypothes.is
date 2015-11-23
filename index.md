@@ -12,8 +12,8 @@ Thousands of people are creating meaningful annotation content via the
 Hypothes.is browser extension, web site embedding, and on partner web sites.
 
 Public annotations on Hypothes.is are licensed under the CC0 licence (aka
-Public Domain). This rich dataset is availalbe via the Hypothes.is
-[HTTP API](api.html).
+Public Domain). This rich dataset is available via the Hypothes.is
+[HTTP API](API.html).
 
 ## Open Source
 

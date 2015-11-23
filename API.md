@@ -3,6 +3,8 @@ layout: swagger
 title: API
 data: hypothesis
 menu: main
+redirect-from:
+ - api.html
 ---
 
 The Hypothes.is HTTP API is available at `https://hypothes.is/api/`. All routes
